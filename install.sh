@@ -8,8 +8,13 @@ installTools() {
      brew install tokei
 }
 
+setupVim() {
+     echo "syntax on" >> ~/.vimrc
+}
+
 main() {
     installTools
+    setupVim
 }
 
 main
