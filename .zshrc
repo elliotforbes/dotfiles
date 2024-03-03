@@ -4,6 +4,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/elliotforbes/.oh-my-zsh"
 
+export GPG_TTY=$(tty)
+
 cp .gitconfig ~/.gitconfig
 
 if ! test -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions; then
@@ -31,6 +33,13 @@ export NVM_DIR="$HOME/.nvm"
 
 # Sets up ssh signing for git
 git config gpg.format ssh
-git config user.signingkey ~/.ssh/id_rsa.pub
+# git config user.signingkey ~/.ssh/id_rsa.pub
+git config --global user.signingkey BD2722E58EDF5C42FBD66DA7F05B88F309191FA5
+
+
+# Installs the cascadia code font
+curl https://github.com/microsoft/cascadia-code/releases/download/v2111.01/CascadiaCode-2111.01.zip -o cascadia.zip
+
+brew install httpie
 
 source $ZSH/oh-my-zsh.sh

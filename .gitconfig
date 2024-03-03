@@ -15,8 +15,13 @@
         l = log
         m = merge
         p = push
+	rebase = rebase -i origin/main
         pwl = push --force-with-lease
 [help]
         autocorrect = 20
 [push]
         autoSetupRemote = true
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
