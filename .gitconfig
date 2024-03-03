@@ -1,0 +1,21 @@
+[safe]
+        directory = /Users/elliotforbes/Projects/TutorialEdge/tutorialedge-cli
+[user]
+        name = elliotforbes
+        email = elliot@elliotforbes.co.uk
+[alias]
+        acp = !git add -A && git commit -m \"auto commit\" && git push
+        co = checkout
+        bb = better_branch.sh
+        a = "add -p"
+        b = branch
+        c = commit
+        cp = cherry-pick
+        d = diff
+        l = log
+        m = merge
+        p = push
+[help]
+        autocorrect = 20
+[push]
+        autoSetupRemote = true

@@ -4,9 +4,20 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/elliotforbes/.oh-my-zsh"
 
-export NVM_DIR="$HOME/.nvm"
-ZSH_THEME="susi"
+cp .gitconfig ~/.gitconfig
+
+# https://github.com/egorlem/ultima.zsh-theme
+ZSH_THEME="ultima"
 plugins=(git)
+
+# Some sensible setup
+export PATH=$PATH:$(go env GOPATH)/bin
+export PATH=$PATH:/Users/elliotforbes/Projects/dotfiles/scripts
+
+# removes duplicate entries from $PATH
+typeset -U PATH path
+
+export NVM_DIR="$HOME/.nvm"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -14,9 +25,3 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-alias ga="git add ."
-alias gap="git add -p"
-gc() {
-    git commit -m $1
-}
-alias gp="git push"
