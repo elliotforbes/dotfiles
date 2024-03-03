@@ -2,7 +2,7 @@
         directory = /Users/elliotforbes/Projects/TutorialEdge/tutorialedge-cli
 [user]
         name = elliotforbes
-        email = elliot@elliotforbes.co.uk
+        email = me@elliotf.dev
 [alias]
         acp = !git add -A && git commit -m \"auto commit\" && git push
         co = checkout
