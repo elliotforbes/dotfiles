@@ -6,9 +6,16 @@ export ZSH="/Users/elliotforbes/.oh-my-zsh"
 
 cp .gitconfig ~/.gitconfig
 
+if ! test -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions; then
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+fi
+if ! test -d ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting; then
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+fi
+
 # https://github.com/egorlem/ultima.zsh-theme
 ZSH_THEME="ultima"
-plugins=(git)
+plugins=(git brew golang gh terraform themes zsh-autosuggestions zsh-syntax-highlighting)
 
 # Some sensible setup
 export PATH=$PATH:$(go env GOPATH)/bin
@@ -18,9 +25,6 @@ export PATH=$PATH:/Users/elliotforbes/Projects/dotfiles/scripts
 typeset -U PATH path
 
 export NVM_DIR="$HOME/.nvm"
-
-source $ZSH/oh-my-zsh.sh
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -28,3 +32,5 @@ export NVM_DIR="$HOME/.nvm"
 # Sets up ssh signing for git
 git config gpg.format ssh
 git config user.signingkey ~/.ssh/id_rsa.pub
+
+source $ZSH/oh-my-zsh.sh
