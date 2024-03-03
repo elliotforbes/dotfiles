@@ -9,12 +9,13 @@
         bb = better_branch.sh
         a = "add -p"
         b = branch
-        c = commit
+        c = commit -S
         cp = cherry-pick
         d = diff
         l = log
         m = merge
         p = push
+        pwl = push --force-with-lease
 [help]
         autocorrect = 20
 [push]
