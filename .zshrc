@@ -6,7 +6,7 @@ export ZSH="/Users/elliotforbes/.oh-my-zsh"
 
 export GPG_TTY=$(tty)
 
-cp .gitconfig ~/.gitconfig
+# cp .gitconfig ~/.gitconfig
 
 if ! test -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions; then
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -33,8 +33,8 @@ export NVM_DIR="$HOME/.nvm"
 
 # Sets up ssh signing for git
 git config gpg.format ssh
-git config user.signingkey ~/.ssh/id_rsa.pub
-
+# git config user.signingkey ~/.ssh/id_rsa.pub
+# git config user.signingkey ~/.ssh/id_ed25519.pub
 
 # Installs the cascadia code font
 curl https://github.com/microsoft/cascadia-code/releases/download/v2111.01/CascadiaCode-2111.01.zip -o cascadia.zip
