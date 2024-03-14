@@ -1,12 +1,10 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/elliotforbes/.oh-my-zsh"
 
 export GPG_TTY=$(tty)
-
-# cp .gitconfig ~/.gitconfig
 
 if ! test -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions; then
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -32,13 +30,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Sets up ssh signing for git
-git config gpg.format ssh
+git config --global  gpg.format ssh
 # git config user.signingkey ~/.ssh/id_rsa.pub
 # git config user.signingkey ~/.ssh/id_ed25519.pub
 
-# Installs the cascadia code font
-curl https://github.com/microsoft/cascadia-code/releases/download/v2111.01/CascadiaCode-2111.01.zip -o cascadia.zip
-
-# brew install httpie
+# brew update && brew upgrade
+# brew install httpiee
 
 source $ZSH/oh-my-zsh.sh
+
+[ -f ~/.resh/shellrc ] && source ~/.resh/shellrc # this line was added by RESH
